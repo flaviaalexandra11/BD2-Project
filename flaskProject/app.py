@@ -1,33 +1,51 @@
-# import the flask class
 from flask import Flask, session, render_template, request, make_response, redirect, flash
 from flaskext.mysql import MySQL
 
-# instatiating flask class 
+# instatiating flask class
 app = Flask(__name__)
-
 mysql = MySQL()
 
 # configuring MySQL for the web application
-app.config['MYSQL_DATABASE_USER'] = 'flavia'  # default user of MySQL to be replaced with appropriate username
-app.config['MYSQL_DATABASE_PASSWORD'] = 'parola'  # default passwrod of MySQL to be replaced with appropriate password
-app.config['MYSQL_ROOT_PASSWORD'] = 'parola'  # default passwrod of MySQL to be replaced with appropriate password
-app.config['MYSQL_DATABASE_DB'] = 'gradebook'  # Database name to be replaced with appropriate database name
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'  # default database host of MySQL to be replaced with appropriate database host
+app.config['MYSQL_DATABASE_USER'] = 'flavia'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'parola'
+app.config['MYSQL_ROOT_PASSWORD'] = 'parola'
+app.config['MYSQL_DATABASE_DB'] = 'gradebook'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 
-# initialise mySQL
+# connecting to database
 mysql.init_app(app)
-# create connection to access data
 conn = mysql.connect()
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    payload = request.get_json()
+    print(payload)
+
+    username = payload["username"]
+    password = payload["password"]
+
+    c = conn.cursor()
+    func = "SELECT login(%s, %s)"
+    c.execute(func, (username, password))
+    user_id = c.fetchone()[0]
+    print(user_id)
+    my_dict = {'result': user_id}
+    return my_dict
+
+
+@app.route('/stud_parents', methods=['GET', 'POST'])
+def get_stud_parents():
+    c = conn.cursor()
+    # TODO: harcodare o lista cu chei
+    # si pt fiecare creez un dictionar
+    # voi returna o list de dictionare
+    proc = "CALL get_students_with_parents"
+    c.execute(proc)
+    my_list = c.fetchall()
+    my_dict = {'result': my_list}
+    return my_dict
 
 
 @app.route('/')
 def index():
-    # create a cursor
-    cursor = conn.cursor()
-    # execute select statement to fetch data to be displayed in combo/dropdown
-    cursor.execute('SELECT first_name, last_name FROM teacher')
-    # fetch all rows ans store as a set of tuples
-    joblist = cursor.fetchall()
-    print(joblist)
-    # render template and send the set of tuples to the HTML file for displaying
-    return render_template("teachers.html", joblist=joblist)
+    return "Hello world"
