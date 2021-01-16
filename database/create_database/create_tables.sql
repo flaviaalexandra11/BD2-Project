@@ -125,3 +125,16 @@ CREATE TABLE `class_allocation` (
   `teacher_user_id` int,
   `subject_id` int
 );
+
+CREATE TABLE `log` (
+  `log_id` int PRIMARY KEY auto_increment,
+  `log_type_id` int,
+  `user_id` int,
+  `log_date` date
+);
+
+CREATE TABLE `log_type` (
+  `log_type_id` int PRIMARY KEY auto_increment,
+  `log_type` VARCHAR(255)
+);
+

@@ -43,7 +43,8 @@ Se ruleaza in ordine scripturile:
 9. creare rutina MySQL Workbench: add_examination.sql
 10. insert_examination.sql
 11. creare rutina: get_classes_by_teachers.sql
-12. adaugare restul rutinelor 
+12. creare trigger: t_teacher.sql 
+13. adaugare restul rutinelor 
 
 # Backend 
 

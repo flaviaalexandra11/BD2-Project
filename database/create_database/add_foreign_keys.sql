@@ -14,6 +14,10 @@ ALTER TABLE `teacher` ADD FOREIGN KEY (`user_id`) REFERENCES `user_account` (`us
 
 ALTER TABLE `admin` ADD FOREIGN KEY (`user_id`) REFERENCES `user_account` (`user_id`);
 
+ALTER TABLE `log` ADD FOREIGN KEY (`user_id`) REFERENCES `user_account` (`user_id`);
+
+ALTER TABLE `log` ADD FOREIGN KEY (`log_type_id`) REFERENCES `log_type` (`log_type_id`);
+
 ALTER TABLE `user_account` ADD FOREIGN KEY (`user_type_id`) REFERENCES `user_types` (`user_type_id`);
 
 ALTER TABLE `parent_allocation` ADD FOREIGN KEY (`parent_user_id`) REFERENCES `parent` (`user_id`);
