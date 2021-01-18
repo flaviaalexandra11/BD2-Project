@@ -18,7 +18,11 @@ select * from subject;
 -- Proceduri.
 call get_students_with_parents;
 
+select * from student;
+
 call compute_average(1, 3, 2, 1);
+
+delete from mean_grade where mean_grade_id = 9;
 
 call get_classes_by_teacher(3);
 
@@ -33,6 +37,10 @@ call get_mean_grade_by_stud_uid(7, 3);
 call get_teacher_profile(3);
 
 update teacher set phone_number = "076281823" where user_id = 3;
+
+select * from examination_type;
+
+call add_examination(7, 4, 1, "proiect", );
 
 select * from log;
 
