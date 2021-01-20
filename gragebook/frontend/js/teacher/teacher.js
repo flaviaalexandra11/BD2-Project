@@ -1,5 +1,5 @@
 /**
- * Teacher Page Main Script: Let us pray it will work this time (solemn silence). 
+ * Teacher Page Main Script. 
  */
 
 $(document).ready(function() {

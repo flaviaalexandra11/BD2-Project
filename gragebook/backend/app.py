@@ -25,6 +25,7 @@ conn = mysql.connect()
 def exec_mysql(func, params=None):
     c = conn.cursor()
     c.execute(func, params)
+    # conn.commit()
     result = list(c.fetchall())
     c.close()
     return result
@@ -175,11 +176,12 @@ def get_teacher_profile(teacher_id):
     return create_dict_from_lists(get_teacher_profile_header, profile), 200
 
 
-@app.route('/profile/teacher/<int:teacher_id>/update', methods=['PUT'])
+@app.route('/profile/teacher/<int:teacher_id>/update', methods=['POST'])
 def update_teacher_profile(teacher_id):
     print(teacher_id)
     payload = request.get_json()
     print(payload)
+    print("AAAAAA")
     if not is_logged_in(teacher_id):
         return {'status': 'not logged in'}, 403
     update = exec_mysql(
