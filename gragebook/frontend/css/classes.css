@@ -1,0 +1,33 @@
+.generation-container {
+    margin-bottom: 3vw;
+}
+
+
+.class-name {
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.classroom-box:hover {
+    box-shadow: 0 4px 4px 2px #DBDEE3;
+}
+
+.classroom-box {
+    background-image: url('../images/fifth-grade.png');
+    background-color: #F8F9FA;
+    border: 1px solid #DBDEE3;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    padding: 9% 0vw 9% 0vw;
+    font-size: x-large;
+    background-position: center;
+    position: relative;
+    margin: 1vw;
+}

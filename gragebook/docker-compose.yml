@@ -1,0 +1,33 @@
+version: '3.3'
+
+services: 
+  gradebook-db:
+    container_name: db
+    image: mysql
+    restart: always
+    env_file: 
+      - .env
+    volumes: 
+      - db-volume:/var/lib/mysql:rw
+      - ./db/:/docker-entrypoint-initdb.d/
+    networks: 
+      - gradebook-network-utility
+    ports:
+      - 3306:3306
+
+  adminer:
+    container_name: gradebookdbutility
+    depends_on: 
+      - gradebook-db
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+    networks: 
+      - gradebook-network-utility
+
+volumes:
+  db-volume:
+
+networks: 
+  gradebook-network-utility:

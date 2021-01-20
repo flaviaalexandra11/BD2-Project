@@ -1,0 +1,89 @@
+
+.table-title {
+    position: relative;
+}
+
+.table-title h2 {
+    float: left;
+}
+
+.add-new, .add-new-stud, .add-new-parent, .add-new-allocation, .add-new-grade {
+    float: right;
+    font-size: 1em;
+    border-radius: 1em;
+    /* margin-bottom: 0.1em; */
+}
+
+table.table td a.save, table.table td a.save:hover, 
+table.table td a.save-stud, table.table td a.save-stud:hover,
+table.table td a.save-parent, table.table td a.save-parent:hover,
+table.table td a.save-allocation, table.table td a.save-allocation:hover,
+table.table td a.save-grade, table.table td a.save-grade:hover {
+    color: #27C46B;
+}
+
+table.table td a.edit, table.table td a.edit:hover,
+table.table td a.edit-stud, table.table td a.edit-stud:hover,
+table.table td a.edit-parent, table.table td a.edit-parent:hover,
+table.table td a.edit-allocation, table.table td a.edit-allocation:hover,
+table.table td a.edit-grade, table.table td a.edit-grade:hover,
+table.table td a.more, table.table td a.more:hover {
+    color: #FFC107;
+}
+
+table.table td a.delete, table.table td a.delete:hover,
+table.table td a.delete-stud, table.table td a.delete-stud:hover, 
+table.table td a.delete-parent, table.table td a.delete-parent:hover,
+table.table td a.delete-allocation, table.table td a.delete-allocation:hover,
+table.table td a.delete-grade, table.table td a.delete-grade:hover {
+    color: #E34724;
+}
+
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+}
+
+table.table td {
+    padding: .4em;
+}
+
+.table-responsive {
+    margin-bottom: 3vw;
+}
+
+table {
+    /* table-layout: fixed ; */
+    width: 100% ;
+}
+
+.email {
+    width: 22% ;
+}
+
+th, td {
+    width: 13%;
+    text-align: center;
+}
+
+td.name-cell {
+    width: 15%;
+}
+td.grade-cell {
+    width: 9.44%;
+}
+
+td.short-data {
+    width: 12.5%;
+}
+td.feedback {
+    width: 25%;
+}
+
+.parents-table {
+    margin-top: 3vw;
+}
+
+.invalid {
+    border: 1px solid #E34724 !important;
+}

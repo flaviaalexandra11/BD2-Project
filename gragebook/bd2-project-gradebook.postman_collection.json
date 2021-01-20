@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "87e192bc-cb02-41da-9457-611512df1547",
+		"name": "bd2-project-gradebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"viorica.aresteanu\",\n    \"password\": \"parolaviorica\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/logout/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logout",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get class by teacher id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/class/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"class",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get students of class",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/students/3&1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"3&1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get parents of class",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/parents/3&1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parents",
+						"3&1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get student grades from class from teacher",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/students/grades/3&1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"grades",
+						"3&1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add grade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 7,\n    \"examination_type\": \"proiect\",\n    \"score\": 420,\n    \"student_feedback\": \"git gud\",\n    \"parent_feedback\": \"do u nou da wae\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/students/grades/3&1/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"grades",
+						"3&1",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/profile/teacher/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"profile",
+						"teacher",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update teacher profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 10,\n    \"first_name\": \"gigel\",\n    \"last_name\": \"bea limonada\",\n    \"email\": \"gigel@bealimonada.ro\",\n    \"phone_number\": \"+55 555 555 555\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/profile/teacher/3/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"profile",
+						"teacher",
+						"3",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

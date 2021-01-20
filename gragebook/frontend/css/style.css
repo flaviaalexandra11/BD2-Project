@@ -1,0 +1,142 @@
+
+body {
+    background-color: #DBDEE3;
+}
+
+h2 {
+    font-size: 1.3em;
+    margin: 1em 0em 1em 0em;
+}
+
+h1 {
+    text-align: center !important;
+}
+
+p {
+    font-size: large;
+}
+
+.column-left {
+    padding: 3vw 3vw 3vw 0vw;
+}
+
+.column-right {
+    padding: 3vw 0vw 3vw 3vw;
+}
+
+button.btn, button.btn-warning {
+    background-color: #5C76B2;
+    border: none;
+    color: white;
+}
+
+button.btn:focus, button.btn:active, button.btn:hover {
+    color: white !important;
+}
+
+.container {
+    background-color: white;
+    padding: 3vw;
+    height: 100%;
+}
+
+nav.navbar {
+    padding: 0vw 14vw 0vw 14vw;
+} 
+
+#brand-img{
+    height: 4vw;
+    width: auto;
+}
+
+.tab-pane {
+    padding-top: 2vw;
+}
+
+.nav-tabs a {
+    color: #5C76B2;
+}
+
+#class-specs {
+    margin-bottom: 5vw;
+    /* position: relative; */
+}
+
+.class-form select {
+    /* width: 85%; */
+}
+
+.save-class-spec#edit-class {
+    /* width: 80%; */
+    margin-top: 1vw;
+    /* float: right; */
+    /* padding: 0vw !important; */
+    /* float: right; */
+    font-size: 1em;
+    border-radius: 1em;
+    /* font-size: large; */
+}
+
+.class-form {
+    margin-left: 0.3%;
+}
+
+.class-form .form-control {
+    margin-bottom: 0.3%;
+}
+
+#save-stud-detailes {
+    margin: 4% 0% 2% 0%;
+    font-size: large;
+}
+
+.navbar-brand {
+    font-size: 2em;
+}
+
+/********************* Desktop *********************/
+@media (min-width: 992px) {
+    
+}
+
+/********************* Tablet *********************/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/********************* Mobile *********************/
+@media (max-width:  767px) {
+    #brand-img {
+        height: 9vh;
+        width: auto;
+    }
+    body {
+        text-align: center;
+        font-size: 0.8em;
+    }
+    nav.navbar {
+        padding: 0vw;
+        margin: none;
+    }
+    h1 {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .column-left, .column-right {
+        text-align: center;
+        padding: 0vw;
+    }
+
+    .container {
+        padding: 3vh;
+    }
+    
+    .classroom-box {
+        background-size: auto 100%;
+        padding: 10vh 0vw 10vh 0vw;
+        margin: 5vh;
+        font-size: x-large;
+    }
+}
+

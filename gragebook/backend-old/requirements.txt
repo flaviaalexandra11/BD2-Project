@@ -1,0 +1,4 @@
+Flask
+Flask-Ext
+Flask-MySQL
+Flask-CORS
