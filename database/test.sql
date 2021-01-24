@@ -1,3 +1,4 @@
+use gradebook;
 
 -- Functii.
 select login("denisa.popescu", "paroladenisa") as user_id;
@@ -24,11 +25,13 @@ call compute_average(1, 3, 2, 1);
 
 delete from mean_grade where mean_grade_id = 9;
 
-call get_classes_by_teacher(3);
+call get_classes_by_teacher(4);
 
 call get_stud_by_class_id(1);
 
 call get_parents_by_class_id(1);
+
+select * from examination_type;
 
 call get_grades_by_stud_uid(7, 3);
 
@@ -40,9 +43,13 @@ update teacher set phone_number = "076281823" where user_id = 3;
 
 select * from examination_type;
 
-call add_examination(7, 4, 1, "proiect", );
+select * from examination natural join grade;
+
+call add_examination(7, 4, 1, "proiect", 10, "deci se poate", "un eseu foarte elocvent");
 
 select * from log;
+
+select * from user_account;
 
 select * from teacher;
 

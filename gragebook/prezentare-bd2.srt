@@ -1,0 +1,135 @@
+﻿1
+00:00:00,670 --> 00:00:02,990
+Catalog online
+
+2
+00:00:03,190 --> 00:00:05,190
+Sa incepem cu ERD-ul
+
+3
+00:00:06,010 --> 00:00:09,010
+user_account - utilizatorii nostri (pot fi admini, elevi, profesori si parinti)
+
+4
+00:00:09,980 --> 00:00:11,980
+parent_allocation - match intre elevi si parinti (rezolva m:m)
+
+5
+00:00:12,700 --> 00:00:14,970
+class - referita de specializari, diriginte, elevi si alte alocari
+
+6
+00:00:16,020 --> 00:00:18,310
+examination  - in legatura cu elevi, profesori, note, materii si tipuri de evaluare
+
+7
+00:00:19,390 --> 00:00:21,390
+teacher_allocation - alocarea profesorilor pe materii
+
+8
+00:00:22,060 --> 00:00:24,060
+class_allocation - alocarea profesorilor pe clase
+
+9
+00:00:24,960 --> 00:00:26,960
+mean_grade - media unui elev la o materie, data de un profesor
+
+10
+00:00:27,160 --> 00:00:29,160
+let's take a look...
+
+11
+00:00:30,480 --> 00:00:32,479
+tabelele noastre
+
+12
+00:00:32,680 --> 00:00:34,680
+trigger pe examination - adauga o intrare in tabela grades
+
+13
+00:00:37,170 --> 00:00:39,900
+trigger pe teacher - adauga un log la updatarea profilului
+
+14
+00:00:41,830 --> 00:00:43,830
+functii & proceduri
+
+15
+00:00:46,260 --> 00:00:48,260
+avem 2 mai interesante
+
+16
+00:00:48,970 --> 00:00:52,990
+compute_average - calculeaza media unui elev la o materie (are si cursor)
+
+17
+00:00:58,030 --> 00:01:01,610
+add_examination - adaugare examinare si nota (foloseste triggerul pe examination de mai devreme)
+
+18
+00:01:06,270 --> 00:01:08,270
+sa ne uitam putin la backend
+
+19
+00:01:09,530 --> 00:01:11,530
+folosim flask
+
+20
+00:01:14,530 --> 00:01:16,530
+conexiunea la baza de date
+
+21
+00:01:23,980 --> 00:01:25,980
+asa apelam funtii si proceduri
+
+22
+00:01:26,180 --> 00:01:31,080
+endpoints & print debugging
+
+23
+00:01:34,590 --> 00:01:36,590
+acum frontend
+
+24
+00:01:36,790 --> 00:01:38,790
+structura cu 4 pagini, scripturi de js si css
+
+25
+00:01:38,990 --> 00:01:40,990
+let's take a look
+
+26
+00:01:42,670 --> 00:01:47,070
+login page
+
+27
+00:01:58,420 --> 00:02:00,420
+dashboard cu clasele la care preda profesorul
+
+28
+00:02:02,970 --> 00:02:04,970
+putem vedea notele elevilor
+
+29
+00:02:07,020 --> 00:02:09,020
+si detalii despre clasa
+
+30
+00:02:12,800 --> 00:02:14,800
+hai sa dam o nota
+
+31
+00:02:19,950 --> 00:02:23,000
+s-a actualizat media
+
+32
+00:02:27,000 --> 00:02:29,000
+putem sa ne vedem profilul
+
+33
+00:02:33,260 --> 00:02:35,260
+acum logout
+
+34
+00:02:38,530 --> 00:02:43,090
+multumesc pentu vizionare :D
